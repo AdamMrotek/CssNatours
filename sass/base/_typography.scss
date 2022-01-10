@@ -1,0 +1,63 @@
+.heading-primary {
+  color: variables.$color-white;
+  text-transform: uppercase;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 3rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3;
+    animation-delay: 3s; */
+  }
+  &--sub {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+    margin-bottom: 7rem;
+
+    animation: moveInRight 1.2s ease-out;
+  }
+}
+.heading-secondary {
+  // flex: 0 0 auto;
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(variables.$color-primary-light, 0.9),
+    rgba(variables.$color-primary-dark, 0.9)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+  letter-spacing: 2px;
+  &:hover {
+    transform: skewY(2deg) skewX(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(variables.$color-primary-dark, 0.774);
+  }
+  & > * {
+    display: inline-block;
+  }
+}
+.heading-tertiary {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.paragraph {
+  display: inline-block;
+  font-size: 1.4rem;
+
+  margin-bottom: 2rem;
+}

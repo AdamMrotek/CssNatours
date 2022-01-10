@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as v;
+.composition {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-self: stretch;
+  transition: all 0.3s;
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 0.5rem 0.5rem rgba(v.$color-black, 0.15);
+    position: absolute;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 1.5rem 4rem rgba(v.$color-black, 0.15);
+      z-index: 5;
+      outline: 1rem solid v.$color-primary;
+      outline-offset: 1rem;
+    }
+    &-p1 {
+      top: 0rem;
+      left: 0rem;
+    }
+    &-p2 {
+      top: 10%;
+      right: 0;
+    }
+    &-p3 {
+      top: 40%;
+      left: 15%;
+    }
+    // display: none;
+  }
+}
