@@ -46,4 +46,15 @@
   align-content: center;
   justify-content: center;
   text-align: center;
+  background-color: v.$color-grey-light;
+  margin-top: -10rem;
+  padding-top: 20rem;
+}
+.tours-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10rem;
+  perspective: 150rem;
+  background-color: v.$color-grey-light;
 }

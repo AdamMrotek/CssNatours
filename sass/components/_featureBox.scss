@@ -3,7 +3,7 @@
   display: flex;
 }
 .feature-box__card {
-  margin: 4rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
   text-align: center;
   flex: 1 1 0%;
   width: 15%;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 2rem rgba(v.$color-black, 0.15);
   transition: all 0.3s;

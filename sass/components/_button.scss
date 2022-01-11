@@ -44,6 +44,14 @@
       background-color: v.$color-white;
     }
   }
+  &--green {
+    background-color: v.$color-primary;
+    color: v.$color-white;
+
+    &::after {
+      background-color: v.$color-primary;
+    }
+  }
   &--animated {
     animation: moveInBottom 0.5s ease-out 1.2s;
     animation-fill-mode: backwards;
