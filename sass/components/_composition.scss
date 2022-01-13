@@ -1,4 +1,11 @@
 @use "../abstracts/variables" as v;
+.section-about__detail__text:hover .paragraph:not(:hover) {
+  transform: scale(0.95);
+  color: rgba(v.$color-black, 0.3);
+}
+.paragraph {
+  transition: ease 1s all;
+}
 .composition {
   flex: 1;
   position: relative;
