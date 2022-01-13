@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as v;
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -9,12 +10,16 @@
     transition: all 0.2s;
     position: relative;
     font-size: 1.6rem;
+
+    border: none;
   }
   &:hover {
     transform: translate(0, -0.3rem);
     box-shadow: 0 0.5rem 1.5rem rgba(43, 43, 43, 0.3);
   }
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translate(0, 1px);
     box-shadow: 0 0.5rem 1rem rgba(43, 43, 43, 0.4);
   }
