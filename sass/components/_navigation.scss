@@ -21,11 +21,11 @@
     background-color: transparent;
     &::before {
       top: 0;
-      transform: rotate(45deg);
+      transform: rotate(135deg);
     }
     &::after {
       top: 0;
-      transform: rotate(-45deg);
+      transform: rotate(-135deg);
     }
   }
 
