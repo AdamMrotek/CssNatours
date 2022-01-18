@@ -1,5 +1,6 @@
+@use "../abstracts/variables" as v;
 .heading-primary {
-  color: variables.$color-white;
+  color: v.$color-white;
   text-transform: uppercase;
 
   &--main {
@@ -32,8 +33,8 @@
   font-weight: 700;
   background-image: linear-gradient(
     to right bottom,
-    rgba(variables.$color-primary-light, 0.9),
-    rgba(variables.$color-primary-dark, 0.9)
+    rgba(v.$color-primary-light, 0.9),
+    rgba(v.$color-primary-dark, 0.9)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -42,7 +43,7 @@
   letter-spacing: 2px;
   &:hover {
     transform: skewY(2deg) skewX(2deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(variables.$color-primary-dark, 0.774);
+    text-shadow: 0.5rem 1rem 2rem rgba(v.$color-primary-dark, 0.774);
   }
   & > * {
     display: inline-block;

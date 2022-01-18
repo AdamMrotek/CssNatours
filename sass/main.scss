@@ -1,4 +1,4 @@
-@use "abstracts/variables";
+@use "abstracts/variables" as v;
 @use "components/composition";
 @use "components/button";
 @use "components/featureBox";
@@ -7,18 +7,19 @@
 @use "components/bg-video";
 @use "components/form";
 @use "layouts/footer";
-@import "base/base";
-@import "layouts/grid";
 
-@import "abstracts/_functions";
-@import "abstracts/_mixins";
+@use "components/navigation";
+@use "base/base";
+@use "layouts/grid";
 
-@import "base/base";
-@import "base/_animation";
-@import "base/_typography";
-@import "base/_utilities";
+@use "abstracts/_functions";
+@use "abstracts/_mixins";
 
-@import "pages/_home";
+@use "base/_animation";
+@use "base/_typography";
+@use "base/_utilities";
+
+@use "pages/_home";
 
 *,
 *::after,
@@ -36,7 +37,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: variables.$color-grey-dark;
+  color: v.$color-grey-dark;
   padding: 3rem 3rem 0px 3rem;
   box-sizing: border-box;
 }
@@ -44,8 +45,8 @@ body {
   height: 90vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(variables.$color-primary-light, 0.7),
-      rgba(variables.$color-primary-dark, 0.774)
+      rgba(v.$color-primary-light, 0.7),
+      rgba(v.$color-primary-dark, 0.774)
     ),
     url(../img/hero.jpg);
   /* stretch image to the width of viewport */
