@@ -41,7 +41,7 @@
       <h1 class="heading-primary">
         <span class="heading-primary--main">   Outdoors</span>
         <span class="heading-primary--sub"> where the life happands</span>
-       <a href="#" class="btn btn--white btn--animated">Discovery of new features</a>
+       <a href="#features" class="btn btn--white btn--animated">Discovery of new features</a>
       </div>
       </h1>
     </header>
@@ -66,7 +66,7 @@
         </div>
       </div>
   </section>
-  <section class="u-flex-box u-padding-8 section-features">
+  <section class="u-flex-box u-padding-8 section-features" id="features">
     <div class="feature-box">
     <div class="feature-box__card">
       <i class="icon-basic-world feature-box__card__icon"></i>
@@ -91,7 +91,7 @@
   </div>
 
   </section>
-  <section class="section-tours">
+  <section class="section-tours" id="tours">
     <h2 class="heading-secondary">Most Popular tours</h2>
     <div class="tours-box u-margin-8"> 
         <div class="card">
@@ -119,7 +119,7 @@
               
               </div>
               
-              <a href="#" class="btn btn--white btn--animated">Book Now!</a>
+              <a href="#popup" class="btn btn--white btn--animated">Book Now!</a>
               
             </div>
           </div>
@@ -150,7 +150,7 @@
             
             </div>
             
-            <a href="#" class="btn btn--white btn--animated">Book Now!</a>
+            <a href="#popup" class="btn btn--white btn--animated">Book Now!</a>
             
           </div>
         </div>
@@ -181,7 +181,7 @@
           
           </div>
           
-          <a href="#" class="btn btn--white btn--animated">Book Now!</a>
+          <a href="#popup" class="btn btn--white btn--animated">Book Now!</a>
           
         </div>
       </div>
@@ -189,7 +189,7 @@
 
     </div>
     <div class="u-margin-8">
-      <a href="#" class="btn btn--green btn--animated">Discover all tours</a>
+      <a href="#popup" class="btn btn--green btn--animated">Discover all tours</a>
     </div>
 
     
@@ -240,7 +240,7 @@
  
 
   </section>
-  <section class="section-book">
+  <section class="section-book" id="form">
     <div class="book">
         <form action="#" method="post" class="book__form"> 
           <div class="u-center-text"> 
@@ -252,7 +252,7 @@
               Full Name
             </label>
           </div>
-          <div class="form">
+          <div class="form" >
             <input type="email" class="form__input" placeholder="Email" id="email" required>
             <label for="email" class="form__lable">
               Email
@@ -275,7 +275,7 @@
 
             </div>
           </div> 
-          <div class="form">
+          <div class="form" >
             <button class="btn btn--green btn--animated u-margin-4">Next step &rarr;</button>
           </div>     
         </form>      
@@ -314,8 +314,10 @@
         </p>
       </div>
     </footer>
-    <div class="popup">
+    <div class="popup" id="popup">
+      <a href="#" class="popup__background"></a>
       <div class="popup__content">
+        <a href="#" class="popup__close">&times;</a>
         <div class="popup__content__images">
           <img src="/img/nat-7.jpg" alt="Nature image 1" class="popup__image">
           <img src="/img/nat-8.jpg" alt="Nature image 2" class="popup__image">
@@ -324,7 +326,7 @@
           <h2 class="heading-secondary">Start Booking Now</h2>
           <h3 class="heading-tertiary">Important - please read the terms and conditions first</h3>
           <p class="paragraph popup__content__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima qui quas et repellendus atque ea animi ratione nam, porro exercitationem id consequatur odio assumenda deserunt non mollitia facere sequi, perferendis expedita dolor minus iure. Quis corrupti amet deleniti repellendus ex rerum autem tenetur saepe velit! Dolore obcaecati nam nobis repudiandae blanditiis expedita perspiciatis, deleniti nemo, ea, deserunt saepe. Temporibus libero voluptatum modi dolor nobis nulla, fuga consequatur eius consequuntur blanditiis? Aperiam, corporis modi enim hic dolores eveniet perspiciatis nihil, </p>
-          <button class="btn btn--green btn--animated u-margin-4">Next step &rarr;</button>
+          <a class="btn btn--green btn--animated u-margin-4" href="#form">Next step &rarr;</a>
         </div>
 
       </div>
