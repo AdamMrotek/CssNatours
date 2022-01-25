@@ -15,9 +15,9 @@
   transition: all 0.3s;
 
   @include mix.respond(tab-port) {
-    margin: 0 -8rem;
+    margin: 0 -5.5rem 4rem -5.5rem;
     flex: 0 0 auto;
-    height: 30rem;
+    height: 20rem;
     // width: 100%;
   }
 
@@ -33,8 +33,8 @@
     display: flex;
 
     @include mix.respond(tab-port) {
-      position: static;
-      flex: 1;
+      position: relative;
+      // flex: 1;
     }
 
     &:hover {
@@ -47,14 +47,31 @@
     &-p1 {
       top: 0rem;
       left: 0rem;
+      @include mix.respond(tab-port) {
+        top: 0rem;
+        left: 0rem;
+        transform: scale(0.85);
+      }
     }
     &-p2 {
       top: 10%;
       right: 0;
+      @include mix.respond(tab-port) {
+        top: 0rem;
+        left: 0rem;
+        transform: scale(1.2);
+        z-index: 2;
+      }
     }
     &-p3 {
       top: 40%;
       left: 15%;
+      @include mix.respond(tab-port) {
+        top: -2rem;
+        left: 0rem;
+        transform: scale(0.9);
+        z-index: 1;
+      }
     }
   }
   &__image {
@@ -62,15 +79,4 @@
     height: 100%;
     object-fit: cover;
   }
-}
-.composition--horizontal {
-  display: flex;
-  height: 50rem;
-}
-.extra-div {
-  display: flex;
-}
-.composition__photo--horizontal {
-  width: 100%;
-  object-fit: cover;
 }

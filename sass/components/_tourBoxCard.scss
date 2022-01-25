@@ -6,6 +6,8 @@
   padding: 2rem;
   height: 50rem;
   width: clamp(30rem, 25%, 50rem);
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
   @include mix.respond(tab-land) {
     width: clamp(30rem, 30%, 50rem);
     padding: 0;
@@ -16,9 +18,6 @@
     margin-bottom: 5rem;
   }
 
-  -webkit-perspective: 150rem;
-  perspective: 150rem;
-
   &__side {
     position: absolute;
     top: 0;
@@ -27,13 +26,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-
     border-radius: 0.5rem;
     box-shadow: 1rem 1rem 2rem rgba(#000000, 0.1);
     overflow: hidden;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-
     transition: all 0.5s ease;
 
     &--front {
@@ -75,6 +72,7 @@
   }
 
   // FRONT SIDE STYLING
+  //////////////////////////////
   &__picture {
     width: 100%;
     height: 23rem;
@@ -167,6 +165,7 @@
     }
   }
   //BACK SIDE STYLING
+  //////////////////////////////
   &-cta {
     display: flex;
     flex-direction: column;
@@ -186,11 +185,17 @@
   }
 }
 
+//BACK SIDE STYLING FOR MOBILE DEVICES
+//////////////////////////////
 @include mix.respond(tab-land) {
   .card {
     height: auto;
     &__heading {
       margin-top: -5rem;
+    }
+    &:hover &__side--front {
+      transform: rotateY(1deg) translateY(-1rem);
+      z-index: 1;
     }
     &__side {
       position: relative;

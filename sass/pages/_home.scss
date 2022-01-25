@@ -2,9 +2,8 @@
 @use "../abstracts/mixins" as mix;
 .section-about {
   background-color: v.$color-grey-light;
-  padding: 25rem 8rem 6rem 8rem;
+  padding: 25rem 8rem 35rem 8rem;
   margin-top: -20vh;
-  padding-bottom: 40rem;
   display: flex;
   flex-direction: column;
   @include mix.respond(tab-port) {
@@ -27,11 +26,11 @@
 }
 .section-features {
   @include mix.respond(tab-land) {
-    margin-top: -22rem;
+    margin-top: -27rem;
     padding: 10rem 2rem;
   }
   @include mix.respond(tab-port) {
-    margin-top: -27rem;
+    margin-top: -14rem;
     padding: 10rem 2rem;
   }
 
