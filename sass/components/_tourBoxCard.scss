@@ -5,12 +5,15 @@
   position: relative;
   padding: 2rem;
   height: 50rem;
-  width: clamp(25rem, 30%, 30rem);
-  @include mix.respond(tab-port) {
-    flex: 1 0 0;
-    min-width: 30rem;
-    flex-wrap: wrap;
-    margin: 1rem;
+  width: clamp(30rem, 25%, 50rem);
+  @include mix.respond(tab-land) {
+    width: clamp(30rem, 30%, 50rem);
+    padding: 0;
+  }
+  @include mix.respond(tab-land) {
+    width: clamp(30rem, 100%, 70rem);
+    padding: 0;
+    margin-bottom: 5rem;
   }
 
   -webkit-perspective: 150rem;
@@ -179,6 +182,38 @@
     &__price__value {
       font-size: 6rem;
       font-weight: 100;
+    }
+  }
+}
+
+@include mix.respond(tab-land) {
+  .card {
+    height: auto;
+    &__heading {
+      margin-top: -5rem;
+    }
+    &__side {
+      position: relative;
+
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 4rem;
+      &--front {
+        padding-bottom: 6rem;
+        margin-bottom: -4rem;
+      }
+      &--back.card__side {
+        z-index: 10000;
+        padding-top: 3rem;
+        clip-path: polygon(0 3rem, 100% 0rem, 100% 70vh, 0% 100%);
+        display: flex;
+        height: 20%;
+        flex-direction: column;
+        transform: rotateY(0);
+        padding-bottom: 2rem;
+      }
     }
   }
 }

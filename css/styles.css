@@ -245,16 +245,21 @@ body {
   position: relative;
   padding: 2rem;
   height: 50rem;
-  width: clamp(25rem, 30%, 30rem);
+  width: clamp(30rem, 25%, 50rem);
   -webkit-perspective: 150rem;
   perspective: 150rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .card {
-    flex: 1 0 0;
-    min-width: 30rem;
-    flex-wrap: wrap;
-    margin: 1rem;
+    width: clamp(30rem, 30%, 50rem);
+    padding: 0;
+  }
+}
+@media (max-width: 75em) {
+  .card {
+    width: clamp(30rem, 100%, 70rem);
+    padding: 0;
+    margin-bottom: 5rem;
   }
 }
 .card__side {
@@ -370,6 +375,36 @@ body {
   font-weight: 100;
 }
 
+@media (max-width: 75em) {
+  .card {
+    height: auto;
+  }
+  .card__heading {
+    margin-top: -5rem;
+  }
+  .card__side {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+  }
+  .card__side--front {
+    padding-bottom: 6rem;
+    margin-bottom: -4rem;
+  }
+  .card__side--back.card__side {
+    z-index: 10000;
+    padding-top: 3rem;
+    clip-path: polygon(0 3rem, 100% 0rem, 100% 70vh, 0% 100%);
+    display: flex;
+    height: 20%;
+    flex-direction: column;
+    transform: rotateY(0);
+    padding-bottom: 2rem;
+  }
+}
 .user-testimonial {
   max-width: 90rem;
   margin-top: 8rem;
@@ -663,10 +698,21 @@ body {
   font-size: 1.4rem;
   color: #eee;
 }
+@media (max-width: 75em) {
+  .footer {
+    padding: 0 2rem;
+  }
+}
 .footer__logo-box {
   text-align: center;
   margin-bottom: 8rem;
-  margin-top: 8rem;
+  padding-top: 8rem;
+}
+@media (max-width: 75em) {
+  .footer__logo-box {
+    margin-bottom: 0rem;
+    padding-top: 3rem;
+  }
 }
 .footer__logo {
   width: 15rem;
@@ -806,6 +852,12 @@ body {
   z-index: 11;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 75em) {
+  .navigation__button {
+    top: 3rem;
+    right: 1.5rem;
+  }
+}
 .navigation__background {
   transition: all 0.5s ease 0.2s;
   background-color: brown;
@@ -817,6 +869,12 @@ body {
   right: 6.5rem;
   z-index: 10;
   background-image: radial-gradient(#55c57a, #28b485);
+}
+@media (max-width: 75em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 2rem;
+  }
 }
 .navigation__nav {
   position: fixed;
@@ -1086,7 +1144,7 @@ body {
   margin-top: -10rem;
   padding-top: 20rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .section-tours {
     margin-top: -10rem;
     padding: 20rem 2rem 10rem 2rem;
@@ -1098,9 +1156,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 10rem;
+  gap: 4rem;
   perspective: 150rem;
   background-color: #eee;
+}
+@media (max-width: 75em) {
+  .tours-box {
+    gap: 2rem;
+  }
 }
 
 .section-stories {
@@ -1122,6 +1185,13 @@ body {
   padding-top: 20rem;
   padding-bottom: 20rem;
   background-image: linear-gradient(to right bottom, #55c57a, #28b485);
+}
+@media (max-width: 56.25em) {
+  .section-book {
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .book {

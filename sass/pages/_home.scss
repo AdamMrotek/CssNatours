@@ -70,7 +70,7 @@
   background-color: v.$color-grey-light;
   margin-top: -10rem;
   padding-top: 20rem;
-  @include mix.respond(tab-port) {
+  @include mix.respond(tab-land) {
     margin-top: -10rem;
     padding: 20rem 2rem 10rem 2rem;
   }
@@ -80,9 +80,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 10rem;
+  gap: 4rem;
   perspective: 150rem;
   background-color: v.$color-grey-light;
+  @include mix.respond(tab-land) {
+    gap: 2rem;
+    // flex-wrap: wrap;
+    // margin: 1rem;
+  }
 }
 .section-stories {
   position: relative;
@@ -104,6 +109,11 @@
     rgba(v.$color-primary-light, 1),
     rgba(v.$color-primary-dark, 1)
   );
+  @include mix.respond(tab-port) {
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 .book {
   background-image: linear-gradient(
@@ -114,6 +124,7 @@
     ),
     url(../../img/nat-10.jpg);
   background-size: cover;
+
   @include mix.respond(tab-port) {
     background-image: linear-gradient(
         105deg,
