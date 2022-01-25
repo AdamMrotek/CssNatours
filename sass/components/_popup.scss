@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mix;
 .popup {
   padding: 5rem;
   position: fixed;
@@ -59,6 +60,9 @@
     border-radius: 3px;
     overflow: hidden;
     transition: ease-in-out 0.3s all;
+    @include mix.respond(phone) {
+      flex-direction: column;
+    }
 
     &__text {
       flex: 3;
@@ -67,19 +71,29 @@
       align-items: flex-start;
       justify-content: space-evenly;
       padding: 5rem 10rem;
+      @include mix.respond(tab-land) {
+        flex: 2;
+        padding: 2rem 4rem;
+      }
     }
 
     &__images {
       display: flex;
       flex-direction: column;
       flex: 2;
+      @include mix.respond(phone) {
+        flex-direction: row;
+      }
     }
     &__paragraph {
       column-count: 2;
       column-gap: 4rem;
       column-rule: 1px solid v.$color-grey-dark-2;
       text-align: justify;
-      text-justify: auto;
+
+      @include mix.respond(tab-land) {
+        column-count: 1;
+      }
     }
   }
   &__image {

@@ -1,10 +1,17 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mix;
 
 .card {
   position: relative;
   padding: 2rem;
   height: 50rem;
-  width: 30rem;
+  width: clamp(25rem, 30%, 30rem);
+  @include mix.respond(tab-port) {
+    flex: 1 0 0;
+    min-width: 30rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
 
   -webkit-perspective: 150rem;
   perspective: 150rem;

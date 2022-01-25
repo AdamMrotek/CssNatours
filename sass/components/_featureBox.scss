@@ -1,6 +1,8 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mix;
 .feature-box {
   display: flex;
+  flex-wrap: wrap;
 }
 .feature-box__card {
   margin: 2rem;
@@ -10,8 +12,10 @@
   background-color: rgba(v.$color-white, 0.7);
 
   text-align: center;
-  flex: 1 1 0%;
-  width: 15%;
+  // flex: 1 1 0%;
+  min-width: 20rem;
+  flex: 1;
+
   padding: 1.5rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 2rem rgba(v.$color-black, 0.15);
@@ -19,9 +23,6 @@
   &:hover {
     transform: translateY(-1rem) scale(1.03);
     box-shadow: 0 1.5rem 3rem rgba(v.$color-black, 0.15);
-  }
-
-  & > * {
   }
 
   &__icon {

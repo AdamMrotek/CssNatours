@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mix;
 
 .user-testimonial {
   max-width: 90rem;
@@ -10,9 +11,18 @@
   background-color: rgba(v.$color-white, 0.5);
   box-shadow: v.$shadow-light-1;
   border-radius: 3px;
+  @include mix.respond(tab-port) {
+    padding-left: 4rem;
+  }
 
+  @include mix.respond(tab-port) {
+    transform: skewX(0deg);
+  }
   & > * {
     transform: skewX(14deg);
+    @include mix.respond(tab-port) {
+      transform: skewX(0deg);
+    }
   }
 
   &__photo {
@@ -23,9 +33,14 @@
     float: left;
 
     -webkit-shape-outside: circle(45% at 50% 50%);
-    shape-outside: circle(40% at 50% 50%);
+    shape-outside: circle(50% at 60% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-4rem) skewX(14deg);
+    @include mix.respond(tab-port) {
+      transform: translateX(-2rem) skewX(0deg);
+      clip-path: circle(40% at 50% 50%);
+      shape-outside: circle(38% at 50% 50%);
+    }
 
     transition: ease all 0.2s;
     &:hover &__caption {
