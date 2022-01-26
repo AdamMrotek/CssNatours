@@ -1,4 +1,5 @@
 {
+  "homepage": "https://adammrotek.github.io/CssNatours/",
   "name": "starter",
   "version": "1.0.0",
   "description": "",
@@ -12,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
