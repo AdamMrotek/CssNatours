@@ -1,9 +1,8 @@
 {
-  "homepage": "https://adammrotek.github.io/CssNatours",
   "name": "starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "sass sass/main.scss css/styles.css -w"
@@ -13,8 +12,5 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.44.0"
-  },
-  "dependencies": {
-    "gh-pages": "^3.2.3"
   }
 }
