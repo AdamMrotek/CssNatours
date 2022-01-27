@@ -53,11 +53,6 @@
   & > * {
     transform: skewY(7deg);
   }
-  // @include mix.respond(tab-land) {
-  //   flex-direction: column;
-  //   margin-top: -7rem;
-  //   padding: 10rem 2rem;
-  // }
 }
 .section-tours {
   padding: 20rem 8rem 10rem 8rem;
@@ -121,7 +116,7 @@
       rgba(v.$color-white, 0.8) 60%,
       transparent 60%
     ),
-    url(../../img/nat-10.jpg);
+    url(../img/nat-10.jpg);
   background-size: cover;
 
   @include mix.respond(tab-port) {
@@ -130,7 +125,7 @@
         rgba(v.$color-white, 0.7),
         rgba(v.$color-white, 0.8)
       ),
-      url(../../img/nat-10.jpg);
+      url(../img/nat-10.jpg);
   }
 
   max-width: 100rem;
