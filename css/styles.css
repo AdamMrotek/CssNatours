@@ -613,6 +613,11 @@ body {
   visibility: hidden;
   transition: 0.3s ease-in-out all;
 }
+@media (max-width: 37.5em) {
+  .popup {
+    padding: 0;
+  }
+}
 .popup:target {
   opacity: 1;
   visibility: visible;
@@ -670,7 +675,7 @@ body {
 }
 @media (max-width: 75em) {
   .popup__content__text {
-    flex: 2;
+    flex: 3;
     padding: 2rem 4rem;
   }
 }
@@ -678,10 +683,14 @@ body {
   display: flex;
   flex-direction: column;
   flex: 2;
+  overflow: hidden;
+  object-fit: cover;
 }
 @media (max-width: 37.5em) {
   .popup__content__images {
     flex-direction: row;
+    flex: 1 0 auto;
+    height: 7rem;
   }
 }
 .popup__content__paragraph {
@@ -697,7 +706,6 @@ body {
 }
 .popup__image {
   flex: 1;
-  height: 100%;
   width: 100%;
   object-fit: cover;
   overflow: hidden;

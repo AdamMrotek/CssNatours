@@ -14,6 +14,9 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease-in-out all;
+  @include mix.respond(phone) {
+    padding: 0;
+  }
   &:target {
     opacity: 1;
     visibility: visible;
@@ -70,7 +73,7 @@
       justify-content: space-evenly;
       padding: 5rem 10rem;
       @include mix.respond(tab-land) {
-        flex: 2;
+        flex: 3;
         padding: 2rem 4rem;
       }
     }
@@ -79,8 +82,12 @@
       display: flex;
       flex-direction: column;
       flex: 2;
+      overflow: hidden;
+      object-fit: cover;
       @include mix.respond(phone) {
         flex-direction: row;
+        flex: 1 0 auto;
+        height: 7rem;
       }
     }
     &__paragraph {
@@ -96,7 +103,6 @@
   }
   &__image {
     flex: 1;
-    height: 100%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
