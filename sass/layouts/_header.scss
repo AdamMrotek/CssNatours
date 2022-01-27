@@ -5,9 +5,9 @@
   background-image: linear-gradient(
       to right bottom,
       rgba(v.$color-primary-light, 0.7),
-      rgba(v.$color-primary-dark, 0.774)
+      rgba(v.$color-primary-dark, 0.75)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   /* stretch image to the width of viewport */
   background-size: cover;
   background-position: top;
@@ -16,7 +16,14 @@
   @include mix.respond(tab-port) {
     clip-path: polygon(0 0, 100% 0, 100% 82vh, 0% 100%);
   }
-
+  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(v.$color-primary-light, 0.7),
+        rgba(v.$color-primary-dark, 0.75)
+      ),
+      url(../img/hero.jpg);
+  }
   &__logo-box {
     position: absolute;
     top: 4rem;
