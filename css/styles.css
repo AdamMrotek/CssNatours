@@ -999,6 +999,12 @@ body {
 @media (max-width: 56.25em) {
   .heading-primary--main {
     letter-spacing: 1rem;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
     font-family: 3rem;
   }
 }
@@ -1012,8 +1018,8 @@ body {
 }
 @media (max-width: 56.25em) {
   .heading-primary--sub {
-    letter-spacing: 0.5em;
-    font-family: 1rem;
+    letter-spacing: 0.3em;
+    font-size: 1.4rem;
   }
 }
 

@@ -20,6 +20,10 @@
     animation-delay: 3s; */
     @include mix.respond(tab-port) {
       letter-spacing: 1rem;
+      font-size: 4rem;
+    }
+    @include mix.respond(tab-port) {
+      letter-spacing: 1rem;
       font-family: 3rem;
     }
   }
@@ -32,8 +36,8 @@
 
     animation: moveInRight 1.2s ease-out;
     @include mix.respond(tab-port) {
-      letter-spacing: 0.5em;
-      font-family: 1rem;
+      letter-spacing: 0.3em;
+      font-size: 1.4rem;
     }
   }
 }
