@@ -5,15 +5,11 @@
   position: relative;
   padding: 2rem;
   height: 50rem;
-  width: clamp(30rem, 25%, 50rem);
+  width: clamp(30rem, 15%, 100rem);
   -webkit-perspective: 150rem;
   perspective: 150rem;
   @include mix.respond(tab-land) {
-    width: clamp(30rem, 30%, 50rem);
-    padding: 0;
-  }
-  @include mix.respond(tab-land) {
-    width: clamp(30rem, 100%, 70rem);
+    width: clamp(40rem, 25%, 50rem);
     padding: 0;
     margin-bottom: 5rem;
   }
@@ -187,7 +183,7 @@
 
 //BACK SIDE STYLING FOR MOBILE DEVICES
 //////////////////////////////
-@include mix.respond(tab-land) {
+@media (max-width: 56.25em), only screen and (hover: none) {
   .card {
     height: auto;
     &__heading {
