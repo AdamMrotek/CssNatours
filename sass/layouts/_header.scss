@@ -16,11 +16,13 @@
   @include mix.respond(tab-port) {
     clip-path: polygon(0 0, 100% 0, 100% 82vh, 0% 100%);
   }
-  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1200px) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 75em) {
     background-image: linear-gradient(
         to right bottom,
         rgba(v.$color-primary-light, 0.7),
-        rgba(v.$color-primary-dark, 0.75)
+        rgba(v.$color-primary-dark, 0.1)
       ),
       url(../img/hero.jpg);
   }
